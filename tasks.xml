@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+  <name>Tasks</name>
+  <author>Michele Wanjiru</author>
+  <creationDate>July 2008</creationDate>
+  <copyright>(C) 2008</copyright>
+  <authorEmail>wnmichele@gmail.com</authorEmail>
+  <version>1.5.0</version>
+  <license>Commercial</license>
+  <description>A component for adding and editing tasks</description>
+  <installfile>install.tasks.php</installfile>
+  <uninstallfile>uninstall.tasks.php</uninstallfile>
+  <install>
+    <sql>
+     <file driver="mysql" charset="utf8">install.mysql.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">uninstall.mysql.sql</file>
+    </sql>
+  </uninstall>
+  <files>
+    <filename>tasks.html.php</filename>
+    <filename>tasks.php</filename>
+    <filename>router.php</filename>
+  </files>
+  <administration>
+    <menu>Task List</menu>
+    <submenu>
+      <menu link="option=com_tasks">Manage Tasks</menu>
+     
+    </submenu>
+    <files folder="admin">
+      <filename>install.mysql.sql</filename>
+      <filename>uninstall.mysql.sql</filename>
+      <filename>admin.tasks.html.php</filename>
+      <filename>admin.tasks.php</filename>
+      <filename>tables/task.php</filename>
+      <filename>toolbar.tasks.html.php</filename>
+      <filename>toolbar.tasks.php</filename>
+    </files>
+  </administration>
+</install>
+
